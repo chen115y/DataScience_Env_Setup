@@ -1,4 +1,4 @@
-# Linux_Personalization
+# Linux Personalization
 
 ## Bash Shell Configuration
 Modify .bashrc file by adding alias and functions, such as something like below.
