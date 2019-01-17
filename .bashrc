@@ -103,8 +103,8 @@ alias mv='mv -i'
 # create recycle bin for danger commands 
 mkdir -p ~/.trash
 alias rm=trash
-alias rm_list='ls ~/.trash'
-alias urm=undelfile
+alias rl='ls ~/.trash'
+alias ur=undelfile
 
 undelfile()
 {

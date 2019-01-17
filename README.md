@@ -11,4 +11,5 @@ Modify .bashrc file by adding alias and functions, such as something like below.
 
 ## Vim Configuration
 Modify vimrc file by using the [example](./vimrc) provided in this repo. The vim should look like:
+
 <a><img src="./four.png" alt="alias"></a>
