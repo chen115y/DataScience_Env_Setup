@@ -52,21 +52,24 @@ if [ -n "$force_color_prompt" ]; then
 	# a case would tend to support setf rather than setaf.)
 	color_prompt=yes
     else
-	color_prompt=
+	color_prompt=no
     fi
 fi
 
-if [ "$color_prompt" = yes ]; then
-    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
-else
-    PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
-fi
-unset color_prompt force_color_prompt
+# enable prompt color
+PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\][\u:\[\033[01;34m\]\w\e[01;32m]\[\033[01;31m\]>>>\e[01;37m'
 
-# If this is an xterm set the title to user@host:dir
+# if [ "$color_prompt" = yes ]; then
+#    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u:\[\033[01;34m\]\w\[\033[00m\]|>>> '
+# else
+#    PS1='${debian_chroot:+($debian_chroot)}\u:\w|>>> '
+# fi
+# unset color_prompt force_color_prompt
+
+# If this is an xterm set the title to user:dir
 case "$TERM" in
 xterm*|rxvt*)
-    PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h: \w\a\]$PS1"
+    PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u: \w\a\]$PS1"
     ;;
 *)
     ;;
@@ -95,34 +98,6 @@ alias l='ls -CF'
 alias lf='ls -hlap | grep -v /'
 # only display directories
 alias ld='ls -hlap | grep /'
-# enforce prompt for some critical commands
-alias rm='rm -i'
-alias cp='cp -i'
-alias mv='mv -i'
-
-# create recycle bin for danger commands 
-mkdir -p ~/.trash
-alias rm=trash
-alias rl='ls ~/.trash'
-alias ur=undelfile
-
-undelfile()
-{
-    mv -i ~/.trash/$@ ./
-}
-
-trash()
-{
-    mv $@ ~/.trash
-}
-
-empty_trash()
-{
-    read -p "Are you sure to empty trash?[n]" confirm
-    if [ $confirm == 'y' ] || [ $confirm == 'Y' ]; then
-        /bin/rm -rf ~/.trash/*
-    fi
-}
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
