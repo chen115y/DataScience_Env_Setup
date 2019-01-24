@@ -1,7 +1,8 @@
 "   This is the personal .vimrc file for Ivan Chen to do python development. 
 "   Recommend choose the parts you want and understand,
 "   Update Hisotry:
-"       1.0 07/-02/2017
+"       1.0 07/02/2017 - initial creation
+"       1.1 01/24/2019 - change color scheme
 "
 
 set nocompatible                "Use Vim settings, rather than Vi settings
@@ -97,4 +98,4 @@ set laststatus=2
 " End of airline stuff
 
 set t_Co=256
-colorscheme peachpuff
+colorscheme wombat256mod
