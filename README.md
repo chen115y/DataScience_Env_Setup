@@ -29,9 +29,9 @@ If you need to work in a shell environment for a long time, you probably would l
 [tmux](https://hackernoon.com/a-gentle-introduction-to-tmux-8d784c404340)
 
 ### Email
-There are also a lot of options on email management. I like alpine, even a lot of people recommend mutt and notmuch. The major reason for me is simple and easy to handle, like Thunderbird.
+There are also a lot of options on email management. I like alpine, even a lot of people recommend [mutt](https://www.tecmint.com/send-mail-from-command-line-using-mutt-command/) and [notmuch](https://notmuchmail.org/). The major reason for me is simple and easy to handle, like Thunderbird.
 
-[alpine](https://alpinelinux.org/)
+[alpine](http://alpine.x10host.com/alpine/)
 
 ### Web Browser
 I usually don’t need too much fancy functionalities when I browse web pages. Lynx meets my needs. I tried some other options, such as w3m, however, I still like lynx due to its simplicity and easy handling.
