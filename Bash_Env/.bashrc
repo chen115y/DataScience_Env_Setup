@@ -131,4 +131,5 @@ export DISPLAY=localhost:0.0
 SPARK_HOME=/usr/local/spark/spark-2.4.0-bin-hadoop2.7
 export SPARK_HOME=$SPARK_HOME
 export PATH=$SPARK_HOME/bin:$PATH
-./sysinfo
+# display friendly greeting message
+./greeting.sh
