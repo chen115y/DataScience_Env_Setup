@@ -80,6 +80,8 @@ I would like to display some operating system information, including software an
 
 [neofetch](https://github.com/dylanaraps/neofetch)
 
+I created a [greeting.sh](./Bash_Env/greeting.sh) file containing some functions to display my own custom-built messages.
+
 ## Bash Shell Configuration
 Modify .bashrc (an [example](./Bash_Env/.bashrc) at Bash_Env folder) file to personalize the terminal prompt with different symbol, format and colors. The setting is:
 ```shell

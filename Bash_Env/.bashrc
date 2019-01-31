@@ -106,6 +106,30 @@ alias pycharm="/mnt/c/'Program Files'/JetBrains/'PyCharm Community Edition 2018.
 alias jupyter-notebook="~/.local/bin/jupyter-notebook --no-browser"
 alias vscode="/mnt/c/Users/yaohua.chen/AppData/Local/Programs/'Microsoft VS Code'/Code.exe"
 
+mkdir -p ~/.trash
+alias rm=trash
+alias r=trash
+alias rl="ls ~/.trash"
+alias ur=undelfile
+
+undelfile()
+{
+    mv -i ~/trash/$0 ./
+}
+
+trash()
+{
+    mv $@ ~/.trash/
+}
+
+emptytrash()
+{
+    read -p "Are you sure to empty trash?[n]" confirm
+    if [ $confirm == "y"] || [ $confirm == "Y" ]; then
+        /bin/rm -rf ~/.trash/*
+    fi
+}
+
 # Alias definitions.
 # You may want to put all your additions into a separate file like
 # ~/.bash_aliases, instead of adding them here directly.
@@ -131,5 +155,6 @@ export DISPLAY=localhost:0.0
 SPARK_HOME=/usr/local/spark/spark-2.4.0-bin-hadoop2.7
 export SPARK_HOME=$SPARK_HOME
 export PATH=$SPARK_HOME/bin:$PATH
+
 # display friendly greeting message
 ./greeting.sh
