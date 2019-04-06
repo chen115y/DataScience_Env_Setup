@@ -1,13 +1,14 @@
 #!/bin/bash
 # This script will clean up disk space by remove some nonuseful data.
 if [ "$(whoami)" != 'root' ]; then
-    sudo -s
+    space="$(sudo df -h | grep root | awk '{print $5}' | grep % | grep -v Use | sort -n | tail -1 | cut -d "%" -f1 -)"
+else
+    space="$(df -h | grep root | awk '{print $5}' | grep % | grep -v Use | sort -n | tail -1 | cut -d "%" -f1 -)"
 fi
 
 echo "Checking the disk space......"
 # This script does a very simple test for checking disk space.
-space="$(df -h | awk '{print $5}' | grep % | grep -v Use | sort -n | tail -1 | cut -d "%" -f1 -)"
-echo "The disk space is $space% full."
+echo "The root disk space is $space% full."
 case $space in
     [1-6]*)
         Message="It is still okay. No worry for now!"
