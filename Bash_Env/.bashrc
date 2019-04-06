@@ -37,7 +37,8 @@ fi
 
 # set a fancy prompt (non-color, unless we know we "want" color)
 case "$TERM" in
-    xterm-color|*-256color) color_prompt=yes;;
+    xterm-color|*-256color) 
+        color_prompt=yes;;
 esac
 
 # uncomment for a colored prompt, if the terminal has the capability; turned
@@ -101,7 +102,6 @@ alias ld='ls -hlap | grep /'
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
-alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
 alias pycharm="/mnt/c/'Program Files'/JetBrains/'PyCharm Community Edition 2018.2.4'/bin/pycharm64.exe"
 alias jupyter-notebook="~/.local/bin/jupyter-notebook --no-browser"
 alias vscode="/mnt/c/Users/yaohua.chen/AppData/Local/Programs/'Microsoft VS Code'/Code.exe"
@@ -125,7 +125,7 @@ trash()
 emptytrash()
 {
     read -p "Are you sure to empty trash?[n]" confirm
-    if [ $confirm == "y"] || [ $confirm == "Y" ]; then
+    if [ $confirm == "y" ] || [ $confirm == "Y" ]; then
         /bin/rm -rf ~/.trash/*
     fi
 }
@@ -157,4 +157,4 @@ export SPARK_HOME=$SPARK_HOME
 export PATH=$SPARK_HOME/bin:$PATH
 
 # display friendly greeting message
-./greeting.sh
+bash greeting.sh
