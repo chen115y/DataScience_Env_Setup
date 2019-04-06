@@ -102,9 +102,7 @@ alias ld='ls -hlap | grep /'
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
-alias pycharm="/mnt/c/'Program Files'/JetBrains/'PyCharm Community Edition 2018.2.4'/bin/pycharm64.exe"
 alias jupyter-notebook="~/.local/bin/jupyter-notebook --no-browser"
-alias vscode="/mnt/c/Users/yaohua.chen/AppData/Local/Programs/'Microsoft VS Code'/Code.exe"
 
 mkdir -p ~/.trash
 alias rm=trash
