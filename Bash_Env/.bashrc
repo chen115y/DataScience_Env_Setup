@@ -155,4 +155,4 @@ export SPARK_HOME=$SPARK_HOME
 export PATH=$SPARK_HOME/bin:$PATH
 
 # display friendly greeting message
-bash greeting.sh
+bash ~/greeting.sh
