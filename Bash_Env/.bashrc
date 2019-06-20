@@ -104,7 +104,7 @@ alias ld='ls -hlap | grep /'
 #   sleep 10; alert
 alias jupyter-notebook="~/.local/bin/jupyter-notebook --no-browser"
 
-mkdir -p ~/.trash
+# mkdir -p ~/.trash
 alias rm=trash
 alias r=trash
 alias rl="ls ~/.trash"
@@ -112,19 +112,21 @@ alias ur=undelfile
 
 undelfile()
 {
-    mv -i ~/trash/$0 ./
+    mv -i ~/.local/share/Trash/files/$0 ./
 }
 
 trash()
 {
-    mv $@ ~/.trash/
+    mv $@ ~/.local/share/Trash/files/ 
 }
 
 emptytrash()
 {
     read -p "Are you sure to empty trash?[n]" confirm
     if [ $confirm == "y" ] || [ $confirm == "Y" ]; then
-        /bin/rm -rf ~/.trash/*
+        /bin/rm -rf ~/.local/share/Trash/files/
+        mkdir ~/.local/share/Trash/files/
+        /bin/rm -rf ~/.local/share/Trash/info/*
     fi
 }
 
