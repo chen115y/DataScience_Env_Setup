@@ -17,6 +17,10 @@ echo
     sudo mkdir /usr/local/spark/
     sudo tar xvf /tmp/spark-2.4.3-bin-hadoop2.7.tgz -C /usr/local/spark
     sudo pip3 install pyspark
+    echo SPARK_HOME=/usr/local/spark/spark-2.4.3-bin-hadoop2.7 >> ~/.bashrc
+    echo export SPARK_HOME=$SPARK_HOME >> ~/.bashrc
+    echo export PATH=$SPARK_HOME/bin:$PATH >> ~/.bashrc
+    source ~/.bashrc
 echo
 echo ----------Install Jupyter Notebook----------
 echo

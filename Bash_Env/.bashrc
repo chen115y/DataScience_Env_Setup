@@ -152,9 +152,9 @@ fi
 BASE16_SHELL=$HOME/.config/base16-shell/
 [ -n "$PS1" ] && [ -s $BASE16_SHELL/profile_helper.sh ] && eval "$($BASE16_SHELL/profile_helper.sh)"
 export DISPLAY=localhost:0.0
-SPARK_HOME=/usr/local/spark/spark-2.4.0-bin-hadoop2.7
-export SPARK_HOME=$SPARK_HOME
-export PATH=$SPARK_HOME/bin:$PATH
 
 # display friendly greeting message
 bash ~/greeting.sh
+
+# Other configurations
+
