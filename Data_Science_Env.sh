@@ -16,7 +16,7 @@ echo
     wget -P /tmp/ http://apache.osuosl.org/spark/spark-2.4.3/spark-2.4.3-bin-hadoop2.7.tgz
     sudo mkdir /usr/local/spark/
     sudo tar xvf /tmp/spark-2.4.3-bin-hadoop2.7.tgz -C /usr/local/spark
-    sudo pip3 install pyspark
+    sudo pip3 install pyspark findspark
     echo SPARK_HOME=/usr/local/spark/spark-2.4.3-bin-hadoop2.7 >> ~/.bashrc
     echo export SPARK_HOME=$SPARK_HOME >> ~/.bashrc
     echo export PATH=$SPARK_HOME/bin:$PATH >> ~/.bashrc
@@ -29,13 +29,13 @@ echo
 echo
 echo ----------iPython Data Science and Engineering Tools Installation----------
 echo
-    sudo pip3 install numpy pandas scipy tensorflow pymc3
+    sudo pip3 install numpy pandas scipy tensorflow pymc3 keras
     sudo pip3 install -U scikit-learn
     sudo pip3 install pillow
     sudo pip3 install h5py
-    sudo pip3 install keras
+    sudo pip3 install nltk
     sudo pip3 install statsmodels fbprophet
-    sudo pip3 install matplotlib seaborn clarify findspark
+    sudo pip3 install matplotlib seaborn clarify
 
     sudo pip3 install optimuspyspark
     sudo pip3 install sqlalchemy
