@@ -12,7 +12,7 @@ echo
     sudo apt install vim tmux htop iotop mc bc
     sudo apt install wget curl
     sudo apt install -y openssh-server
-    sudo apt install pandoc lynx
+    sudo apt install pandoc 
     sudo add-apt-repository ppa:danielrichter2007/grub-customizer
     sudo apt install grub-customizer
 echo
