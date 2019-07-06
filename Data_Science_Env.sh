@@ -37,7 +37,7 @@ echo
     sudo pip3 install statsmodels fbprophet
     sudo pip3 install matplotlib seaborn clarify
 
-    sudo pip3 install optimuspyspark
+    # sudo pip3 install optimuspyspark
     sudo pip3 install sqlalchemy
     sudo pip3 install pandas-profiling
     sudo pip3 install spark-df-profiling
