@@ -11,6 +11,13 @@ echo
     sudo pip3 install --upgrade virtualenv
     sudo pip3 install pyinstaller
 echo
+echo ----------install java 8-----------
+echo
+    sudo apt install openjdk-8-jdk
+    sudo update-alternatives --config java
+    sudo echo "JAVA_HOME="/usr/lib/jvm/java-8-openjdk-amd64"" >> ~/.bashrc
+    . ~/.bashrc
+echo
 echo ----------Install Spark 2.4.3 Stable----------
 echo
     wget -P /tmp/ http://apache.osuosl.org/spark/spark-2.4.3/spark-2.4.3-bin-hadoop2.7.tgz
@@ -18,14 +25,15 @@ echo
     sudo tar xvf /tmp/spark-2.4.3-bin-hadoop2.7.tgz -C /usr/local/spark
     sudo pip3 install pyspark findspark
     echo SPARK_HOME=/usr/local/spark/spark-2.4.3-bin-hadoop2.7 >> ~/.bashrc
-    echo export SPARK_HOME=$SPARK_HOME >> ~/.bashrc
-    echo export PATH=$SPARK_HOME/bin:$PATH >> ~/.bashrc
-    source ~/.bashrc
+    echo export SPARK_HOME=\$SPARK_HOME >> ~/.bashrc
+    echo export PATH=\$SPARK_HOME/bin:\$PATH >> ~/.bashrc
+    . ~/.bashrc
 echo
 echo ----------Install Jupyter Notebook----------
 echo
     sudo pip3 install jupyter
-    sudo chmod 777 ~/.local/share/jupyter/
+    sudo chmod -R 777 ~/.local/share/jupyter/
+	sudo chmod -R 777 ~/.jupyter/
 echo
 echo ----------iPython Data Science and Engineering Tools Installation----------
 echo
@@ -56,3 +64,24 @@ echo ----------Jupyter Notebook Extension Configuration----------
 echo
     sudo jupyter contrib nbextension install --user
     sudo chmod a+rw ~/.jupyter/nbconfig/notebook.json
+echo
+echo ----------Install R Kernel----------
+echo
+    sudo apt install r-base r-base-dev libssl-dev libcurl3-dev
+    echo The installation of the R kernel for Jupyter is performed under R command line
+    echo install.packages\(\'IRkernel\'\)
+    echo IRkernel::installspec\(\)
+echo
+echo ----------Install Scala Kernel----------
+echo
+    cd /tmp/
+    SCALA_VERSION=2.13.0 ALMOND_VERSION=0.6.0
+    curl -Lo coursier https://git.io/coursier-cli
+    chmod +x coursier
+    ./coursier bootstrap \
+      -r jitpack \
+      -i user -I user:sh.almond:scala-kernel-api_$SCALA_VERSION:$ALMOND_VERSION \
+      sh.almond:scala-kernel_$SCALA_VERSION:$ALMOND_VERSION \
+      -o almond
+    ./almond --install
+    jupyter kernelspec list

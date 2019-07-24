@@ -104,10 +104,14 @@ alias ld='ls -hlap | grep /'
 #   sleep 10; alert
 alias jupyter-notebook="~/.local/bin/jupyter-notebook --no-browser"
 
-# mkdir -p ~/.trash
+if [ ! -d ~/.local/share/Trash ]; then
+    sudo mkdir -p ~/.local/share/Trash/files
+    sudo mkdir -p ~/.local/share/Trash/info
+    sudo chmod -R 777 ~/.local/share/Trash
+fi
 alias rm=trash
 alias r=trash
-alias rl="ls ~/.trash"
+alias rl="ls ~/.local/share/Trash/files"
 alias ur=undelfile
 
 undelfile()

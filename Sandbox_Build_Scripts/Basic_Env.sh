@@ -28,18 +28,10 @@ echo
     git clone http://github.com/chen115y/Ubuntu_Sandbox_Setup.git ~/.sandbox_setup
     cp ~/.sandbox_setup/Bash_Env/.bashrc ~/.bashrc
     cp ~/.sandbox_setup/Bash_Env/greeting.sh ~/
-    source ~/.bashrc
+    . ~/.bashrc
 echo
 echo ----------Install Vim awesome version----------
 echo
     git clone https://github.com/amix/vimrc.git ~/.vim_runtime
     sudo chmod a+xrw ~/.vim_runtime/*.sh
     sudo sh ~/.vim_runtime/install_awesome_vimrc.sh
-
-echo
-echo ----------install java 8-----------
-echo
-    sudo apt install openjdk-8-jdk
-    sudo update-alternatives --config java
-    sudo echo "JAVA_HOME="/usr/lib/jvm/java-8-openjdk-amd64"" >> /etc/environment
-    source /etc/environment
