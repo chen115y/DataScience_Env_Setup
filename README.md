@@ -6,4 +6,4 @@
 ## For Windows
 ### [Data Science Environment Setup with Anaconda](./Windows.pdf) 
 ## [Linux Personalization Recommendations](./Personalize.md)
-## Jupyter Notebook Quick Start Guide [notebook](./Jupyter Notebook - Quick Start Guide.ipynb)
+## Jupyter Notebook Quick Start Guide [notebook](./Quick_Start/JupyterNotebook_QuickStartGuide.ipynb)
