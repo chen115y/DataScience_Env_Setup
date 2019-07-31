@@ -3,17 +3,20 @@
 echo
 echo ----------Install Python 3.X----------
 echo
-    sudo apt update
-    sudo apt install python3
+    sudo apt update && sudo apt -y upgrade
+    sudo apt install -y python3
+    echo export PYTHONPATH=/usr/bin/python3 >> ~/.bashrc
+    . ~/.bashrc
 
-    sudo apt install python3-pip python-dev build-essential
+
+    sudo apt install -y python3-pip python-dev build-essential
     sudo pip3 install --upgrade pip
     sudo pip3 install --upgrade virtualenv
     sudo pip3 install pyinstaller
 echo
 echo ----------install java 8-----------
 echo
-    sudo apt install openjdk-8-jdk
+    sudo apt install -y openjdk-8-jdk
     sudo update-alternatives --config java
     sudo echo "JAVA_HOME="/usr/lib/jvm/java-8-openjdk-amd64"" >> ~/.bashrc
     . ~/.bashrc
@@ -32,7 +35,7 @@ echo
 echo ----------Install Jupyter Notebook----------
 echo
     sudo pip3 install jupyter
-    sudo chmod -R 777 ~/.local/share/jupyter/
+    sudo chmod -R 777 ~/.local/share/
 	sudo chmod -R 777 ~/.jupyter/
 echo
 echo ----------iPython Data Science and Engineering Tools Installation----------
@@ -52,10 +55,9 @@ echo
 
     wget -P /tmp/ https://github.com/jgm/pandoc/releases/download/2.5/pandoc-2.5-1-amd64.deb
     sudo dpkg -i /tmp/pandoc-2.5-1-amd64.deb
-    sudo apt install texlive-xetex
+    sudo apt install -y texlive-xetex
     sudo pip3 install ipython-sql
     sudo pip3 install jupyter_contrib_nbextensions
-    sudo pip install jupyter_contrib_nbextensions
     sudo pip3 install autopep8
 
     sudo pip3 install scrapy beautifulsoup4
@@ -63,14 +65,17 @@ echo
 echo ----------Jupyter Notebook Extension Configuration----------
 echo
     sudo jupyter contrib nbextension install --user
+    sudo chmod -R 777 ~/.local/share/
+	sudo chmod -R 777 ~/.jupyter/
     sudo chmod a+rw ~/.jupyter/nbconfig/notebook.json
 echo
-echo ----------Install R Kernel----------
+echo ----------Jupyter Scheme Configuration----------
 echo
-    sudo apt install r-base r-base-dev libssl-dev libcurl3-dev
-    echo The installation of the R kernel for Jupyter is performed under R command line
-    echo install.packages\(\'IRkernel\'\)
-    echo IRkernel::installspec\(\)
+    sudo pip3 install jupyterthemes
+    sudo pip3 install --upgrade jupyterthemes
+    # dark
+    sudo chmod -R 777 ~/.jupyter/
+    jt -t onedork -fs 95 -altp -tfs 11 -nfs 115 -cellw 88% -T
 echo
 echo ----------Install Scala Kernel----------
 echo
@@ -84,4 +89,13 @@ echo
       sh.almond:scala-kernel_$SCALA_VERSION:$ALMOND_VERSION \
       -o almond
     ./almond --install
-    jupyter kernelspec list
+
+jupyter kernelspec list
+
+echo
+echo ----------Install R Kernel----------
+echo
+    sudo apt install -y r-base r-base-dev libssl-dev libcurl3-dev
+    echo The installation of the R kernel for Jupyter is performed under R command line
+    echo install.packages\(\'IRkernel\'\)
+    echo IRkernel::installspec\(\)
