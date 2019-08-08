@@ -8,18 +8,18 @@
 echo
 echo ----------Install basic packages----------
 echo
-    sudo apt update
-    sudo apt install vim tmux htop iotop mc bc
-    sudo apt install wget curl
+    sudo apt update && sudo apt -y upgrade
+    sudo apt install -y vim tmux htop iotop mc bc
+    sudo apt install -y wget curl
     sudo apt install -y openssh-server
-    sudo apt install pandoc 
+    sudo apt install -y pandoc
     sudo add-apt-repository ppa:danielrichter2007/grub-customizer
-    sudo apt install grub-customizer
+    sudo apt install -y grub-customizer
 echo
 echo ---------Install Git for Source Version Control----------
 echo
-    sudo apt install git-all
-    sudo apt install git
+    sudo apt install -y git-all
+    sudo apt install -y git
     git config --global user.email "chen115yaohua@gmail.com"
     git config --global user.name "Ivan Chen"
 echo
