@@ -44,6 +44,9 @@ echo
     sudo pip3 install nltk
     sudo pip3 install statsmodels fbprophet
     sudo pip3 install matplotlib seaborn clarify
+    # install pytorch for latest python version 3.7
+    sudo pip3 install https://download.pytorch.org/whl/cpu/torch-1.0.1.post2-cp37-cp37m-linux_x86_64.whl
+    sudo pip3 install torchvision
 
     # sudo pip3 install optimuspyspark
     sudo pip3 install sqlalchemy
@@ -54,9 +57,11 @@ echo
     sudo dpkg -i /tmp/pandoc-2.5-1-amd64.deb
     sudo apt install texlive-xetex
     sudo pip3 install ipython-sql
+    sudo pip3 install rpy2
     sudo pip3 install jupyter_contrib_nbextensions
     sudo pip install jupyter_contrib_nbextensions
     sudo pip3 install autopep8
+    # install and enable jupyter themes, especially dark one
 
     sudo pip3 install scrapy beautifulsoup4
 echo
@@ -64,6 +69,9 @@ echo ----------Jupyter Notebook Extension Configuration----------
 echo
     sudo jupyter contrib nbextension install --user
     sudo chmod a+rw ~/.jupyter/nbconfig/notebook.json
+    sudo pip3 install jupyterthemes
+    sudo pip3 install --upgrade jupyterthemes
+    # jt -t onedork -fs 95 -altp -tfs 11 -nfs 115 -cellw 88% -T
 echo
 echo ----------Install R Kernel----------
 echo
