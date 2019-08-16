@@ -40,12 +40,17 @@ echo
 echo
 echo ----------iPython Data Science and Engineering Tools Installation----------
 echo
-    sudo pip3 install numpy pandas scipy tensorflow pymc3 keras
+    sudo pip3 install numpy pandas scipy tensorflow pymc3 keras xlrd
     sudo pip3 install -U scikit-learn
     sudo pip3 install pillow
-    sudo pip3 install h5py
+    sudo pip3 install h5py pytables
+    # natural language processing
     sudo pip3 install nltk
+    # time Series
     sudo pip3 install statsmodels fbprophet
+    # parallel processing
+    sudo pip3 install dask numba multiprocess ipyparallel distributed
+    # visualization
     sudo pip3 install matplotlib seaborn clarify
     # install pytorch for latest python version 3.7
     sudo pip3 install https://download.pytorch.org/whl/cpu/torch-1.0.1.post2-cp37-cp37m-linux_x86_64.whl
@@ -83,7 +88,7 @@ echo
     sudo pip3 install --upgrade jupyterthemes
     # dark
     sudo chmod -R 777 ~/.jupyter/
-    jt -t onedork -fs 95 -altp -tfs 11 -nfs 115 -cellw 88% -T
+    # jt -t onedork -fs 95 -altp -tfs 11 -nfs 115 -cellw 88% -T
 echo
 echo ----------Install Scala Kernel----------
 echo
