@@ -49,7 +49,7 @@ echo
     # time Series
     sudo pip3 install statsmodels fbprophet
     # parallel processing
-    sudo pip3 install dask numba multiprocess ipyparallel distributed
+    sudo pip3 install dask numba multiprocess ipyparallel distributed joblib
     # visualization
     sudo pip3 install matplotlib seaborn clarify
     # install pytorch for latest python version 3.7
