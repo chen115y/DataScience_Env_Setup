@@ -64,12 +64,15 @@ echo
     wget -P /tmp/ https://github.com/jgm/pandoc/releases/download/2.5/pandoc-2.5-1-amd64.deb
     sudo dpkg -i /tmp/pandoc-2.5-1-amd64.deb
     sudo apt install -y texlive-xetex
+    # for SQL magic function
     sudo pip3 install ipython-sql
-    sudo pip3 install rpy2
+    # for R magic function
+    sudo pip3 install rpy2 tzlocal
+    # for notebook extensions
     sudo pip3 install jupyter_contrib_nbextensions
     sudo pip3 install autopep8
     # install and enable jupyter themes, especially dark one
-
+    # for web scrawler
     sudo pip3 install scrapy beautifulsoup4
 echo
 echo ----------Jupyter Notebook Extension Configuration----------
