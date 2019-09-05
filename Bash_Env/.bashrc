@@ -161,4 +161,6 @@ export DISPLAY=localhost:0.0
 bash ~/greeting.sh
 
 # Other configurations
+# Set cd automated
+shopt -s autocd
 
