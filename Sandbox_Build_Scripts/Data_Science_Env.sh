@@ -40,7 +40,7 @@ echo
 echo
 echo ----------iPython Data Science and Engineering Tools Installation----------
 echo
-    sudo pip3 install numpy pandas scipy tensorflow pymc3 keras xlrd
+    sudo pip3 install numpy pandas scipy tensorflow pymc3 keras xlrd pyarrow
     sudo pip3 install -U scikit-learn
     sudo pip3 install pillow
     sudo pip3 install h5py pytables
