@@ -92,8 +92,8 @@ fi
 #export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
 
 # some more ls aliases
-alias ll='ls -alF'
-alias la='ls -A'
+alias ll='ls -alFh'
+alias la='ls -Ah'
 alias l='ls -CF'
 # only display files
 alias lf='ls -hlap | grep -v /'
@@ -161,4 +161,6 @@ export DISPLAY=localhost:0.0
 bash ~/greeting.sh
 
 # Other configurations
+# Set cd automated
+shopt -s autocd
 
