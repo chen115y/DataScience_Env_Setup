@@ -46,8 +46,6 @@ echo
     sudo pip3 install h5py pytables
     # natural language processing
     sudo pip3 install nltk
-    # time Series
-    sudo pip3 install statsmodels fbprophet
     # parallel processing
     sudo pip3 install dask dask-ml dask-searchcv numba multiprocess ipyparallel distributed joblib
     # visualization
@@ -74,6 +72,10 @@ echo
     # install and enable jupyter themes, especially dark one
     # for web scrawler
     sudo pip3 install scrapy beautifulsoup4
+
+    # time Series
+    sudo pip3 install pystan statsmodels fbprophet
+
 echo
 echo ----------Jupyter Notebook Extension Configuration----------
 echo
