@@ -13,6 +13,7 @@ echo
     sudo pip3 install --upgrade pip
     sudo pip3 install --upgrade virtualenv
     sudo pip3 install pyinstaller
+    sudo pip3 install cpython
 echo
 echo ----------install java 8-----------
 echo
