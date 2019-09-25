@@ -23,11 +23,11 @@ echo
 echo
 echo ----------Install Spark 2.4.3 Stable----------
 echo
-    wget -P /tmp/ http://apache.osuosl.org/spark/spark-2.4.3/spark-2.4.3-bin-hadoop2.7.tgz
+    wget -P /tmp/://www.apache.org/dyn/closer.lua/spark/spark-2.4.4/spark-2.4.4-bin-hadoop2.7.tgz
     sudo mkdir /usr/local/spark/
-    sudo tar xvf /tmp/spark-2.4.3-bin-hadoop2.7.tgz -C /usr/local/spark
+    sudo tar xvf /tmp/spark-2.4.4-bin-hadoop2.7.tgz -C /usr/local/spark
     sudo pip3 install pyspark findspark
-    echo SPARK_HOME=/usr/local/spark/spark-2.4.3-bin-hadoop2.7 >> ~/.bashrc
+    echo SPARK_HOME=/usr/local/spark/spark-2.4.4-bin-hadoop2.7 >> ~/.bashrc
     echo export SPARK_HOME=\$SPARK_HOME >> ~/.bashrc
     echo export PATH=\$SPARK_HOME/bin:\$PATH >> ~/.bashrc
     . ~/.bashrc
@@ -84,6 +84,9 @@ echo
     sudo pip3 install jupyterthemes
     sudo pip3 install --upgrade jupyterthemes
     # jt -t onedork -fs 95 -altp -tfs 11 -nfs 115 -cellw 88% -T
+    sudo pip3 install qgrid
+    jupyter nbextension enable --py --sys-prefix widgetsnbextension
+    jupyter nbextension enable --py --sys-prefix qgrid
 echo
 echo ----------Jupyter Scheme Configuration----------
 echo
