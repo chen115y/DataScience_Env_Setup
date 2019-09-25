@@ -13,6 +13,7 @@ echo
     sudo pip3 install --upgrade pip
     sudo pip3 install --upgrade virtualenv
     sudo pip3 install pyinstaller
+    sudo pip3 install cpython
 echo
 echo ----------install java 8-----------
 echo
@@ -46,8 +47,6 @@ echo
     sudo pip3 install h5py pytables
     # natural language processing
     sudo pip3 install nltk
-    # time Series
-    sudo pip3 install statsmodels fbprophet
     # parallel processing
     sudo pip3 install dask dask-ml dask-searchcv numba multiprocess ipyparallel distributed joblib
     # visualization
@@ -74,6 +73,10 @@ echo
     # install and enable jupyter themes, especially dark one
     # for web scrawler
     sudo pip3 install scrapy beautifulsoup4
+
+    # time Series
+    sudo pip3 install pystan statsmodels fbprophet
+
 echo
 echo ----------Jupyter Notebook Extension Configuration----------
 echo
@@ -95,6 +98,13 @@ echo
     # dark
     sudo chmod -R 777 ~/.jupyter/
     # jt -t onedork -fs 95 -altp -tfs 11 -nfs 115 -cellw 88% -T
+echo
+echo ----------Install Visual Studio Code-------------
+echo
+    sudo apt install software-properties-common apt-transport-https
+    wget -q https://packages.microsoft.com/keys/microsoft.asc -O- | sudo apt-key add -
+    sudo add-apt-repository "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main"
+    sudo apt install code
 echo
 echo ----------Install Scala Kernel----------
 echo

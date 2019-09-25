@@ -99,6 +99,8 @@ alias l='ls -CF'
 alias lf='ls -hlap | grep -v /'
 # only display directories
 alias ld='ls -hlap | grep /'
+# for python pip3 all package upgrade
+alias pip3_upgrade='sudo pip3 freeze — local | grep -v ‘^\-e’ | cut -d = -f 1 | xargs -n1 sudo pip3 install -U'
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
