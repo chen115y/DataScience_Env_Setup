@@ -40,3 +40,5 @@ echo
     git clone https://github.com/amix/vimrc.git ~/.vim_runtime
     sudo chmod a+xrw ~/.vim_runtime/*.sh
     sudo sh ~/.vim_runtime/install_awesome_vimrc.sh
+    cp ~/.sandbox_setup/Bash_Env/.vimrc ~/.vimrc
+
