@@ -10,7 +10,7 @@ printf "Today's date is `date`, this is week `date +"%V"`.\n\n"
 # fi
 # if [ "$(whoami)" != 'root' ]; then
 #    echo "$USER have no permission as a root user."
-#    echo 
+#    echo
 # fi
 # printf "These users are currently connected:\n"
 # w | cut -d " " -f 1 - | grep -v USER | sort -u
@@ -52,7 +52,7 @@ case "$kernel_name" in
         "SunOS") os="Solaris" ;;
         "Haiku") os="Haiku" ;;
         "GNU"*) os="GNU" ;;
-        *) os="Unknown";; 
+        *) os="Unknown";;
 esac
 
 printf "Kernal: $kernel_name $kernel_version\n"
@@ -60,23 +60,23 @@ printf "Kernal: $kernel_name $kernel_version\n"
 case "$os" in
         "Linux" | "GNU")
             if [[ "$(< /proc/version)" =~ "Microsoft" || "$(< /proc/sys/kernel/osrelease)" =~ "Microsoft" ]]; then
-                distro="$(lsb_release -sir) [Windows 10]" 
+                distro="$(lsb_release -sir) [Windows 10]"
 
             elif [[ -f "/etc/GoboLinuxVersion" ]]; then
-                distro="GoboLinux" 
+                distro="GoboLinux"
 
             elif [[ -f "/etc/redstar-release" ]]; then
-                distro="Red Star OS" 
+                distro="Red Star OS"
 
             elif type -p lsb_release >/dev/null; then
-                lsb_flags="-sir" 
+                lsb_flags="-sir"
                 distro="$(lsb_release $lsb_flags)"
 
             elif type -p guix >/dev/null; then
                 distro="GuixSD"
 
             elif type -p crux >/dev/null; then
-                distro="${distro//version}" 
+                distro="${distro//version}"
 
             elif [[ -d "/system/app/" && -d "/system/priv-app" ]]; then
                 distro="Android $(getprop ro.build.version.release)"
@@ -88,7 +88,7 @@ case "$os" in
                 done
 
                 # Format the distro name.
-                distro="${NAME:-${DISTRIB_ID}} ${VERSION_ID:-${DISTRIB_RELEASE}}" 
+                distro="${NAME:-${DISTRIB_ID}} ${VERSION_ID:-${DISTRIB_RELEASE}}"
 
                 # Workarounds for distros that go against the os-release standard.
                 [[ -z "${distro// }" ]] && distro="$(awk '/BLAG/ {print $1; exit}' /etc/*ease /usr/lib/*ease)"
@@ -114,7 +114,7 @@ case "$os" in
             esac
             distro="$codename $osx_version $osx_build"
 
-            distro="${distro/ ${osx_build}}" 
+            distro="${distro/ ${osx_build}}"
             case "$osx_version" in
                         "10."[4-7]*) distro="${distro/${codename}/Mac OS X}" ;;
                         "10."[8-9]* | "10.1"[0-1]*) distro="${distro/${codename}/OS X}" ;;
@@ -124,7 +124,7 @@ case "$os" in
         ;;
 
         "BSD")
-            distro="$kernel_name" 
+            distro="$kernel_name"
 
             distro="${distro/DragonFly/DragonFlyBSD}"
 
@@ -142,7 +142,7 @@ case "$os" in
         ;;
 
         "Solaris")
-            distro="$(awk 'NR==1{print $1 " " $3;}' /etc/release)" 
+            distro="$(awk 'NR==1{print $1 " " $3;}' /etc/release)"
             distro="${distro/\(*}"
         ;;
 
@@ -186,4 +186,30 @@ case "${SHELL##*/}" in
 esac
 
 printf "Shell: $shell\n"
+echo
+printf "$(cat /proc/meminfo | grep "MemTotal:")"
+echo
+printf "$(cat /proc/meminfo | grep "SwapTotal:")"
+echo
+echo
+printf "$(lscpu -y | grep "Architecture:")"
+echo
+printf "$(lscpu -y | grep "Virtualization:")"
+echo
+printf "$(lscpu -y | grep "CPU(s):")"
+echo
+printf "$(lscpu -y | grep "Thread(s) per core:")"
+echo
+printf "$(lscpu -y | grep "Core(s) per socket:")"
+echo
+printf "$(lscpu -y | grep "CPU MHz:")"
+echo
+printf "$(lscpu -y | grep "CPU max MHz:")"
+echo
+printf "$(lscpu -y | grep "Vendor ID:")"
+echo
+printf "$(lscpu -y | grep "Model name:")"
+echo
+printf "$(lscpu -y | grep "Hypervisor vendor:")"
+echo
 echo

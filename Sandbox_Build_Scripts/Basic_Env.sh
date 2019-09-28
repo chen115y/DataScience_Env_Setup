@@ -22,6 +22,11 @@ echo
     sudo apt install -y git
     git config --global user.email "chen115yaohua@gmail.com"
     git config --global user.name "Ivan Chen"
+    # update CA certificates
+    sudo apt-get install apt-transport-https ca-certificates -y
+    sudo update-ca-certificates
+    git config --global http.sslverify false
+    export GIT_SSL_NO_VERIFY=true
 echo
 echo ----------BASH Configuration----------
 echo
