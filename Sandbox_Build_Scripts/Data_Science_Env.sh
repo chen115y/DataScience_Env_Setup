@@ -88,8 +88,8 @@ echo
     sudo pip3 install --upgrade jupyterthemes
     # jt -t onedork -fs 95 -altp -tfs 11 -nfs 115 -cellw 88% -T
     sudo pip3 install qgrid
-    jupyter nbextension enable --py --sys-prefix widgetsnbextension
-    jupyter nbextension enable --py --sys-prefix qgrid
+    sudo jupyter nbextension enable --py --sys-prefix widgetsnbextension
+    sudo jupyter nbextension enable --py --sys-prefix qgrid
 echo
 echo ----------Jupyter Scheme Configuration----------
 echo
