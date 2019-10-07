@@ -42,11 +42,12 @@ echo
 echo ----------iPython Data Science and Engineering Tools Installation----------
 echo
     sudo pip3 install numpy pandas scipy tensorflow pymc3 keras xlrd pyarrow
-    sudo pip3 install -U scikit-learn
+    sudo pip3 install -U scikit-learn xgboost
     sudo pip3 install pillow
     sudo pip3 install h5py pytables
     # natural language processing
-    sudo pip3 install nltk
+    sudo pip3 install nltk textblob
+    sudo python3 -m textblob.download_corpora
     # parallel processing
     sudo pip3 install dask dask-ml dask-searchcv numba multiprocess ipyparallel distributed joblib
     # visualization
