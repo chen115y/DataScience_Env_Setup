@@ -46,7 +46,7 @@ echo
     sudo pip3 install pillow
     sudo pip3 install h5py pytables
     # natural language processing
-    sudo pip3 install nltk textblob gensim
+    sudo pip3 install nltk textblob smart_open gensim
     sudo python3 -m textblob.download_corpora
     # parallel processing
     sudo pip3 install dask dask-ml dask-searchcv numba multiprocess ipyparallel distributed joblib
