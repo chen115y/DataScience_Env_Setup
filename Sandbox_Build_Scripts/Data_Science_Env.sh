@@ -22,7 +22,7 @@ echo
     sudo echo "JAVA_HOME="/usr/lib/jvm/java-8-openjdk-amd64"" >> ~/.bashrc
     . ~/.bashrc
 echo
-echo ----------Install Spark 2.4.3 Stable----------
+echo ----------Install Spark 2.4.4 Stable----------
 echo
     wget -P /tmp/://www.apache.org/dyn/closer.lua/spark/spark-2.4.4/spark-2.4.4-bin-hadoop2.7.tgz
     sudo mkdir /usr/local/spark/
