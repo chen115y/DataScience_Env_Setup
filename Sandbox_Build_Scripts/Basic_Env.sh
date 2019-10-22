@@ -15,6 +15,7 @@ echo
     sudo apt install -y pandoc
     sudo add-apt-repository ppa:danielrichter2007/grub-customizer
     sudo apt install -y grub-customizer
+    sudo apt install gcc-5 g++-5 python-dev python3-dev
 echo
 echo ---------Install Git for Source Version Control----------
 echo

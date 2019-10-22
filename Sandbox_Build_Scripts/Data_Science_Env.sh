@@ -9,10 +9,10 @@ echo
     . ~/.bashrc
 
 
-    sudo apt install -y python3-pip python-dev build-essential
+    sudo apt install -y python3-pip python-dev build-essential python3-dev
     sudo pip3 install --upgrade pip
     sudo pip3 install --upgrade virtualenv
-    sudo pip3 install pyinstaller
+    sudo pip3 install pyinstaller pystan
     sudo pip3 install cpython
 echo
 echo ----------install java 8-----------
