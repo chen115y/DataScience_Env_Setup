@@ -9,11 +9,12 @@ echo
     . ~/.bashrc
 
 
-    sudo apt install -y python3-pip python-dev build-essential
+    sudo apt install -y python3-pip python-dev build-essential python3-dev
     sudo pip3 install --upgrade pip
     sudo pip3 install --upgrade virtualenv
     sudo pip3 install pyinstaller
     sudo pip3 install cpython
+    sudo pip3 install --trusted-host pypi.org --trusted-host files.pythonhosted.org pip setuptools
 echo
 echo ----------install java 8-----------
 echo
