@@ -12,7 +12,7 @@ echo
     sudo apt install -y python3-pip python-dev build-essential python3-dev
     sudo pip3 install --upgrade pip
     sudo pip3 install --upgrade virtualenv
-    sudo pip3 install pyinstaller
+    sudo pip3 install pyinstaller pystan
     sudo pip3 install cpython
     sudo pip3 install --trusted-host pypi.org --trusted-host files.pythonhosted.org pip setuptools
 echo
@@ -23,7 +23,7 @@ echo
     sudo echo "JAVA_HOME="/usr/lib/jvm/java-8-openjdk-amd64"" >> ~/.bashrc
     . ~/.bashrc
 echo
-echo ----------Install Spark 2.4.3 Stable----------
+echo ----------Install Spark 2.4.4 Stable----------
 echo
     wget -P /tmp/://www.apache.org/dyn/closer.lua/spark/spark-2.4.4/spark-2.4.4-bin-hadoop2.7.tgz
     sudo mkdir /usr/local/spark/
