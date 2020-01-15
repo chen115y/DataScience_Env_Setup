@@ -25,13 +25,15 @@ echo
 echo
 echo ----------Install Spark 2.4.4 Stable----------
 echo
-    wget -P /tmp/://www.apache.org/dyn/closer.lua/spark/spark-2.4.4/spark-2.4.4-bin-hadoop2.7.tgz
+    wget -P /tmp/ http://us.mirrors.quenda.co/apache/spark/spark-3.0.0-preview2/spark-3.0.0-preview2-bin-hadoop2.7.tgz
     sudo mkdir /usr/local/spark/
-    sudo tar xvf /tmp/spark-2.4.4-bin-hadoop2.7.tgz -C /usr/local/spark
+    sudo tar xvf /tmp/spark-3.0.0-preview2-bin-hadoop2.7.tgz -C /usr/local/spark
     sudo pip3 install pyspark findspark
-    echo SPARK_HOME=/usr/local/spark/spark-2.4.4-bin-hadoop2.7 >> ~/.bashrc
+    echo SPARK_HOME=/usr/local/spark/spark-3.0.0-preview2-bin-hadoop2.7 >> ~/.bashrc
     echo export SPARK_HOME=\$SPARK_HOME >> ~/.bashrc
     echo export PATH=\$SPARK_HOME/bin:\$PATH >> ~/.bashrc
+    echo export PYSPARK_PYTHON=/usr/bin/python3
+    echo export PYSPARK_DRIVER_PYTHON=python3
     echo export SPARK_LOCAL_IP=127.0.0.1 >> ~/.bashrc
     . ~/.bashrc
 echo
@@ -102,32 +104,3 @@ echo
     sudo chmod -R 777 ~/.jupyter/
     # jt -t onedork -fs 95 -altp -tfs 11 -nfs 115 -cellw 88% -T
 echo
-echo ----------Install Visual Studio Code-------------
-echo
-    sudo apt install software-properties-common apt-transport-https
-    wget -q https://packages.microsoft.com/keys/microsoft.asc -O- | sudo apt-key add -
-    sudo add-apt-repository "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main"
-    sudo apt install code
-echo
-echo ----------Install Scala Kernel----------
-echo
-    cd /tmp/
-    SCALA_VERSION=2.13.0 ALMOND_VERSION=0.6.0
-    curl -Lo coursier https://git.io/coursier-cli
-    chmod +x coursier
-    ./coursier bootstrap \
-      -r jitpack \
-      -i user -I user:sh.almond:scala-kernel-api_$SCALA_VERSION:$ALMOND_VERSION \
-      sh.almond:scala-kernel_$SCALA_VERSION:$ALMOND_VERSION \
-      -o almond
-    ./almond --install
-
-jupyter kernelspec list
-
-echo
-echo ----------Install R Kernel----------
-echo
-    sudo apt install -y r-base r-base-dev libssl-dev libcurl3-dev
-    echo The installation of the R kernel for Jupyter is performed under R command line
-    echo install.packages\(\'IRkernel\'\)
-    echo IRkernel::installspec\(\)

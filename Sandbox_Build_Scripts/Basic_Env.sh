@@ -42,6 +42,7 @@ echo
     sudo chmod a+xrw ~/.vim_runtime/*.sh
     sudo sh ~/.vim_runtime/install_awesome_vimrc.sh
     sudo cp ~/.sandbox_setup/Bash_Env/.vimrc ~/.vimrc
+    mkdir ~/.config/
     mkdir ~/.config/pip/
     sudo cp ~/.sandbox_setup/Bash_Env/pip.conf ~/.config/pip/
 
