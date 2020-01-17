@@ -15,6 +15,7 @@ echo
     sudo pip3 install pyinstaller pystan
     sudo pip3 install cpython
     sudo pip3 install --trusted-host pypi.org --trusted-host files.pythonhosted.org pip setuptools
+    sudo pip3 install flask
 echo
 echo ----------install java 8-----------
 echo
@@ -23,7 +24,7 @@ echo
     sudo echo "JAVA_HOME="/usr/lib/jvm/java-8-openjdk-amd64"" >> ~/.bashrc
     . ~/.bashrc
 echo
-echo ----------Install Spark 2.4.4 Stable----------
+echo ----------Install Spark 3.0 Preview----------
 echo
     wget -P /tmp/ http://us.mirrors.quenda.co/apache/spark/spark-3.0.0-preview2/spark-3.0.0-preview2-bin-hadoop2.7.tgz
     sudo mkdir /usr/local/spark/
