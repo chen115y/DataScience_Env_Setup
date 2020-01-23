@@ -89,9 +89,10 @@ jedi                              0.15.2
 Jinja2                            2.10.3             
 jmespath                          0.9.4              
 joblib                            0.14.1             
+json5                             0.8.5              
 jsonpatch                         1.16               
 jsonpointer                       1.10               
-jsonschema                        2.6.0              
+jsonschema                        3.2.0              
 jupyter                           1.0.0              
 jupyter-client                    5.3.4              
 jupyter-console                   6.0.0              
@@ -101,6 +102,8 @@ jupyter-core                      4.6.1
 jupyter-highlight-selected-word   0.2.0              
 jupyter-latex-envs                1.4.6              
 jupyter-nbextensions-configurator 0.4.1              
+jupyterlab                        1.2.5              
+jupyterlab-server                 1.0.6              
 jupyterthemes                     0.20.0             
 Keras                             2.3.1              
 Keras-Applications                1.0.8              
@@ -176,6 +179,7 @@ pymongo                           3.10.1
 pyOpenSSL                         17.5.0             
 pypandoc                          1.4                
 pyparsing                         2.4.6              
+pyrsistent                        0.15.7             
 pyserial                          3.4                
 pyspark                           2.4.4              
 pystan                            2.19.1.1           

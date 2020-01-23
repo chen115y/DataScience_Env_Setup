@@ -38,9 +38,10 @@ echo
     echo export SPARK_LOCAL_IP=127.0.0.1 >> ~/.bashrc
     . ~/.bashrc
 echo
-echo ----------Install Jupyter Notebook----------
+echo ----------Install Jupyter Notebook and Jupyter Lab----------
 echo
     sudo pip3 install jupyter
+    sudo pip3 install jupyterlab
     sudo chmod -R 777 ~/.local/share/
 	sudo chmod -R 777 ~/.jupyter/
 echo
