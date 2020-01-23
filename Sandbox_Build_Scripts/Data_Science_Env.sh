@@ -46,10 +46,17 @@ echo
 echo
 echo ----------iPython Data Science and Engineering Tools Installation----------
 echo
-    sudo pip3 install numpy pandas scipy tensorflow pymc3 keras xlrd pyarrow
+    # standard and powerful data processing
+    sudo pip3 install numpy pandas scipy
+    # neural network deep learning
+    sudo pip3 install tensorflow pymc3 keras
+    # dealing with Excel or very large data set
+    sudo pip3 install xlrd pyarrow vaex
+    sudo pip3 install h5py pytable
+    # standard machine learning and preprocessing
     sudo pip3 install -U scikit-learn xgboost
+    # image processing
     sudo pip3 install pillow
-    sudo pip3 install h5py pytables
     # natural language processing
     sudo pip3 install nltk textblob smart_open gensim
     sudo python3 -m textblob.download_corpora
@@ -60,12 +67,11 @@ echo
     # install pytorch for latest python version 3.7
     sudo pip3 install https://download.pytorch.org/whl/cpu/torch-1.0.1.post2-cp37-cp37m-linux_x86_64.whl
     sudo pip3 install torchvision
-
-    # sudo pip3 install optimuspyspark
+    # database and data profiling
     sudo pip3 install sqlalchemy
     sudo pip3 install pandas-profiling
     sudo pip3 install spark-df-profiling
-
+    # convert jupyter notebook into pdf
     wget -P /tmp/ https://github.com/jgm/pandoc/releases/download/2.5/pandoc-2.5-1-amd64.deb
     sudo dpkg -i /tmp/pandoc-2.5-1-amd64.deb
     sudo apt install -y texlive-xetex
@@ -79,7 +85,6 @@ echo
     # install and enable jupyter themes, especially dark one
     # for web scrawler
     sudo pip3 install scrapy beautifulsoup4
-
     # time Series
     sudo pip3 install pystan statsmodels fbprophet
 
