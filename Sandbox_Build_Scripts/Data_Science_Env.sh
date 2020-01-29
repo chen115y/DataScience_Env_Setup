@@ -12,8 +12,8 @@ echo
     sudo apt install -y python3-pip python-dev build-essential python3-dev
     sudo pip3 install --upgrade pip
     sudo pip3 install --upgrade virtualenv
-    sudo pip3 install pyinstaller pystan
-    sudo pip3 install cpython
+    sudo pip3 install pyinstaller
+    sudo pip3 install cpython Cython
     sudo pip3 install --trusted-host pypi.org --trusted-host files.pythonhosted.org pip setuptools
     sudo pip3 install flask
 echo
@@ -48,7 +48,7 @@ echo
 echo ----------iPython Data Science and Engineering Tools Installation----------
 echo
     # standard and powerful data processing
-    sudo pip3 install numpy pandas scipy
+    sudo pip3 install numpy pandas scipy pystan
     # neural network deep learning
     sudo pip3 install tensorflow pymc3 keras
     # dealing with Excel or very large data set
