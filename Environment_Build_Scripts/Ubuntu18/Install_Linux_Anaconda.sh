@@ -33,8 +33,9 @@ echo
     conda config --add channels anaconda
     sudo chmod -R 777 ~/.conda/
 echo ----------Import Environment-----------
-echo    
-    conda env create -f DSIA.yml
+echo
+    curl -O -k https://github.com/chen115y/DataScience_Env_Setup/blob/master/Environment_Build_Scripts/Ubuntu18/spec_list.txt
+    conda env create --name DSIA --file spec_list.txt
     conda env list
     conda activate DSIA
     conda update --all --yes
