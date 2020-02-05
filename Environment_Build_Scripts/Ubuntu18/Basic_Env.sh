@@ -31,9 +31,9 @@ echo
 echo
 echo ----------BASH Configuration----------
 echo
-    git clone http://github.com/chen115y/Ubuntu_Sandbox_Setup.git ~/.sandbox_setup
-    sudo cp ~/.sandbox_setup/Bash_Env/.bashrc ~/.bashrc
-    sudo cp ~/.sandbox_setup/Bash_Env/greeting.sh ~/
+    git clone http://github.com/chen115y/DataScience_Env_Setup.git ~/.env_setup
+    sudo cp ~/.env_setup/Environment_Build_Scripts/Ubuntu18/.bashrc ~/.bashrc
+    sudo cp ~/.env_setup/Environment_Build_Scripts/Ubuntu18/greeting.sh ~/
     . ~/.bashrc
 echo
 echo ----------Install Vim awesome version----------
@@ -41,8 +41,8 @@ echo
     git clone https://github.com/amix/vimrc.git ~/.vim_runtime
     sudo chmod a+xrw ~/.vim_runtime/*.sh
     sudo sh ~/.vim_runtime/install_awesome_vimrc.sh
-    sudo cp ~/.sandbox_setup/Bash_Env/.vimrc ~/.vimrc
+    sudo cp ~/.env_setup/Environment_Build_Scripts/Ubuntu18/.vimrc ~/.vimrc
     mkdir ~/.config/
     mkdir ~/.config/pip/
-    sudo cp ~/.sandbox_setup/Bash_Env/pip.conf ~/.config/pip/
+    sudo cp ~/.env_setup/Environment_Build_Scripts/Ubuntu18/pip.conf ~/.config/pip/
 

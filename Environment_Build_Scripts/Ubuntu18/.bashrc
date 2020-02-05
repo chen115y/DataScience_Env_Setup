@@ -105,6 +105,8 @@ alias pip3_upgrade='sudo pip3 freeze — local | grep -v ‘^\-e’ | cut -d = -
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
 alias jupyter-notebook="~/.local/bin/jupyter-notebook --no-browser"
+# Add conda command path
+alias conda="~/anaconda3/bin/conda"
 
 if [ ! -d ~/.local/share/Trash ]; then
     sudo mkdir -p ~/.local/share/Trash/files
@@ -166,3 +168,11 @@ bash ~/greeting.sh
 # Set cd automated
 shopt -s autocd
 
+export PYTHONPATH=/usr/bin/python3
+JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
+SPARK_HOME=/usr/local/spark/spark-3.0.0-preview2-bin-hadoop2.7
+export SPARK_HOME=$SPARK_HOME
+export PATH=$SPARK_HOME/bin:$PATH
+export PYSPARK_PYTHON=/usr/bin/python3
+export PYSPARK_DRIVER_PYTHON=python3
+export SPARK_LOCAL_IP=127.0.0.1
