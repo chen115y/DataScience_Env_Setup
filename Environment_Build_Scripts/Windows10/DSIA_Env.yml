@@ -11,6 +11,7 @@ dependencies:
   - _tflow_select=2.1.0
   - absl-py=0.8.1
   - alabaster=0.7.12
+  - alembic=1.4.2
   - anyqt=0.0.10
   - argh=0.26.2
   - arrow-cpp=0.11.1
@@ -18,6 +19,7 @@ dependencies:
   - astor=0.8.0
   - astroid=2.3.3
   - astropy=4.0
+  - async_generator=1.10
   - atomicwrites=1.3.0
   - attrs=19.3.0
   - automat=0.8.0
@@ -28,21 +30,24 @@ dependencies:
   - beautifulsoup4=4.8.2
   - blas=1.0
   - bleach=3.1.0
+  - blinker=1.4
   - bokeh=1.4.0
   - boto=2.49.0
   - boto3=1.11.0
   - botocore=1.14.0
   - bottleneck=1.3.1
   - bz2file=0.98
-  - ca-certificates=2019.11.28
+  - ca-certificates=2020.4.5.1
   - cachecontrol=0.12.5
-  - certifi=2019.11.28
+  - certifi=2020.4.5.1
+  - certipy=0.1.3
   - cffi=1.13.2
   - chardet=3.0.4
   - click=7.0
   - cloudpickle=1.2.2
   - colorama=0.4.3
   - commonmark=0.9.1
+  - configurable-http-proxy=4.2.1
   - console_shortcut=0.1.1
   - constantly=15.1.0
   - convertdate=2.1.3
@@ -75,7 +80,6 @@ dependencies:
   - freetype=2.9.1
   - fsspec=0.6.2
   - future=0.18.2
-  - gast=0.2.2
   - gensim=3.8.0
   - gflags=2.2.2
   - glog=0.3.5
@@ -121,6 +125,9 @@ dependencies:
   - jupyter_highlight_selected_word=0.2.0
   - jupyter_latex_envs=1.4.4
   - jupyter_nbextensions_configurator=0.4.1
+  - jupyter_telemetry=0.0.5
+  - jupyterhub=1.1.0
+  - jupyterhub-base=1.1.0
   - jupyterlab=1.2.5
   - jupyterlab_server=1.0.6
   - keras=2.2.4
@@ -130,8 +137,10 @@ dependencies:
   - keyring=21.1.0
   - keyrings.alt=3.1.1
   - kiwisolver=1.1.0
+  - krb5=1.17.1
   - lazy-object-proxy=1.4.3
   - libboost=1.67.0
+  - libcurl=7.69.1
   - libgpuarray=0.7.6
   - libiconv=1.15
   - libpng=1.6.37
@@ -139,6 +148,7 @@ dependencies:
   - libpython=2.1
   - libsodium=1.0.16
   - libspatialindex=1.9.3
+  - libssh2=1.8.2
   - libtiff=4.1.0
   - libxgboost=0.90
   - libxml2=2.9.9
@@ -196,6 +206,7 @@ dependencies:
   - networkx=2.4
   - ninja=1.9.0
   - nltk=3.4.5
+  - nodejs=13.13.0
   - notebook=6.0.3
   - numba=0.48.0
   - numpy=1.18.1
@@ -203,7 +214,7 @@ dependencies:
   - numpydoc=0.9.2
   - olefile=0.46
   - openpyxl=3.0.3
-  - openssl=1.1.1d
+  - openssl=1.1.1g
   - opentsne=0.3.11
   - opt_einsum=3.1.0
   - orange-canvas-core=0.1.7
@@ -216,7 +227,7 @@ dependencies:
   - pandocfilters=1.4.2
   - paramiko=2.6.0
   - parsel=1.5.2
-  - parso=0.6.0
+  - parso=0.5.2
   - partd=1.1.0
   - pathtools=0.1.2
   - patsy=0.5.1
@@ -234,17 +245,18 @@ dependencies:
   - py=1.8.1
   - py-xgboost=0.90
   - py4j=0.10.7
-  - pyarrow=0.11.1
   - pyasn1=0.4.8
   - pyasn1-modules=0.2.7
   - pycodestyle=2.5.0
   - pycparser=2.19
+  - pycurl=7.43.0.5
   - pydispatcher=2.0.5
   - pydocstyle=4.0.1
   - pyflakes=2.1.1
   - pygments=2.5.2
   - pygpu=0.7.6
   - pyhamcrest=1.9.0
+  - pyjwt=1.7.1
   - pylint=2.4.4
   - pymc3=3.7
   - pynacl=1.3.0
@@ -269,9 +281,12 @@ dependencies:
   - pytest-runner=5.2
   - python=3.7.6
   - python-dateutil=2.8.1
+  - python-editor=1.0.4
+  - python-json-logger=0.1.11
   - python-jsonrpc-server=0.3.4
   - python-language-server=0.31.7
   - python-louvain=0.13
+  - python_abi=3.7
   - pytorch=1.3.1
   - pytz=2019.3
   - pywavelets=1.1.1
@@ -290,6 +305,8 @@ dependencies:
   - retrying=1.3.3
   - rope=0.16.0
   - rtree=0.9.3
+  - ruamel.yaml=0.16.6
+  - ruamel.yaml.clib=0.2.0
   - s3transfer=0.3.0
   - scikit-image=0.16.2
   - scikit-learn=0.22.1
@@ -364,28 +381,64 @@ dependencies:
   - zope.interface=4.7.1
   - zstd=1.3.7
   - pip:
+    - aniso8601==8.0.0
     - apyori==1.1.2
     - argparse==1.4.0
+    - astunparse==1.6.3
+    - autokeras==1.0.2
     - blis==0.4.1
     - cachetools==4.0.0
+    - cairocffi==1.1.0
+    - cairosvg==2.4.2
     - catalogue==1.0.0
+    - cssselect2==0.3.0
     - cymem==2.0.3
+    - diagrams==0.8.2
+    - docopt==0.6.2
+    - fastparquet==0.3.3
+    - filelock==3.0.12
+    - flask-restful==0.3.8
     - funcy==1.14
+    - gast==0.3.3
     - google-auth==1.11.0
     - google-auth-oauthlib==0.4.1
+    - html5lib==1.0.1
+    - keras-tuner==1.0.1
+    - markdown2==2.3.8
+    - md2pdf==0.4
     - memory-profiler==0.57.0
     - mlxtend==0.17.2
     - murmurhash==1.0.2
+    - mypy==0.770
+    - mypy-extensions==0.4.3
     - oauthlib==3.1.0
     - plac==1.1.3
     - preshed==3.0.2
+    - pyarrow==0.11.1
     - pyception==0.1.1
+    - pyphen==0.9.5
     - python-docx==0.8.10
+    - python-graphviz==0.13.2
+    - regex==2020.4.4
     - requests-oauthlib==1.3.0
     - rsa==4.0
+    - sacremoses==0.0.41
+    - sentencepiece==0.1.85
     - spacy==2.2.4
     - srsly==1.0.2
+    - tabulate==0.8.7
+    - tb-nightly==2.3.0a20200402
     - tensorboard==2.1.0
+    - tensorboard-plugin-wit==1.6.0.post2
+    - terminaltables==3.1.0
+    - tf-estimator-nightly==2.3.0.dev2020040201
+    - tf-nightly==2.2.0.dev20200402
     - thinc==7.4.0
+    - thrift==0.13.0
+    - tinycss2==1.0.2
+    - tokenizers==0.5.2
+    - transformers==2.8.0
+    - typed-ast==1.4.1
+    - typing-extensions==3.7.4.2
     - wasabi==0.6.0
-
+    - weasyprint==51
