@@ -1,5 +1,4 @@
 #!/bin/sh
-#!/bin/sh
 
 # Data Science Environmental Setup
 # Install Linux Ubuntu
