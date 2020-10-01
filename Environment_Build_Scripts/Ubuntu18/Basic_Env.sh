@@ -46,4 +46,9 @@ echo
     mkdir ~/.config/
     mkdir ~/.config/pip/
     sudo cp ~/.env_setup/Environment_Build_Scripts/Ubuntu18/pip.conf ~/.config/pip/
-
+echo
+echo -----------Install Some Useful Packages----------
+echo
+    sudo add-apt-repository ppa:oguzhaninan/stacer
+    sudo apt-get update
+    sudo apt-get install stacer
