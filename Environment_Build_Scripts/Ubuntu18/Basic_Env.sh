@@ -52,3 +52,5 @@ echo
     sudo add-apt-repository ppa:oguzhaninan/stacer
     sudo apt-get update
     sudo apt-get install stacer
+    sudo add-apt-repository ppa:shutter/ppa
+    sudo apt-get update && sudo apt-get install shutter
