@@ -15,6 +15,6 @@
 ### [Local Environment Setup with Brew](./Environment_Build_Scripts/MacOS/brew_installs.sh)
 ### [Python Local Environment Setup](./Environment_Build_Scripts/MacOS/python_packages_macos.txt)
 
-## [Linux Command-line Enviroment Personalization](./Personalize.md)
+## Linux Command-line Enviroment Personalization [Markdown](./Personalize.md)
 ## Jupyter Notebook Quick Start Guide [notebook](./Notebook_Quick_Start/JupyterNotebook_QuickStartGuide.ipynb) [html](./Notebook_Quick_Start/JupyterNotebook_QuickStartGuide.html)
-## [Conda Cheat Sheet](./conda-cheatsheet.pdf)
+## Conda Cheat Sheet [PDF](./conda-cheatsheet.pdf)
