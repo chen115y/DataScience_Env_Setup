@@ -11,7 +11,7 @@ setopt GLOB_COMPLETE
 setopt CORRECT
 setopt CORRECT_ALL
 export SPARK_HOME=/usr/local/Cellar/apache-spark/3.0.1/libexec
-export PYTHONPATH=/usr/local/Cellar/apache-spark/3.0.1/libexec/python/:$PYTHONP$
+export PYTHONPATH=/usr/local/Cellar/apache-spark/3.0.1/libexec/python/:$PYTHONP
 export PATH=/usr/local/Cellar/apache-spark/2.4.4/bin:$PATH
 export JAVA_HOME=/Library/java/JavaVirtualMachines/jdk1.8.0_271.jdk/contents/Home/
 export JRE_HOME=/Library/java/JavaVirtualMachines/jdk1.8.0_271.jdk/contents/Home/jre/

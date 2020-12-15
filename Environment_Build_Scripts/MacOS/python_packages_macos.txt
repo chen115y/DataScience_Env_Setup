@@ -11,6 +11,8 @@ astroid==2.4.2
 astunparse==1.6.3
 async-generator==1.10
 attrs==20.3.0
+autogluon==0.0.15
+autogluon-contrib-nlp==0.0.1b20201009
 autokeras==1.0.11
 Automat==20.2.0
 autopep8==1.5.4
@@ -18,6 +20,7 @@ awsglue-local==1.0.2
 awswrangler==1.10.1
 Babel==2.9.0
 backcall==0.2.0
+bcrypt==3.2.0
 beautifulsoup4==4.9.3
 bleach==3.2.1
 blis==0.7.2
@@ -30,6 +33,7 @@ cachetools==4.1.1
 cairocffi==1.2.0
 CairoSVG==2.5.0
 catalogue==2.0.1
+catboost==0.24.3
 Cerberus==1.3.2
 certifi==2020.11.8
 certipy==0.1.3
@@ -40,8 +44,10 @@ click==7.1.2
 cloudpickle==1.6.0
 cmdstanpy==0.9.67
 colorama==0.4.4
+ConfigSpace==0.4.10
 confuse==1.3.0
 constantly==15.1.0
+contextvars==2.4
 convertdate==2.3.0
 coverage==5.3
 cryptography==3.2.1
@@ -77,6 +83,7 @@ funcy==1.15
 future==0.18.2
 gast==0.4.0
 gensim==3.8.3
+gluoncv==0.8.0
 google-auth==1.23.0
 google-auth-oauthlib==0.4.2
 google-pasta==0.2.0
@@ -93,6 +100,7 @@ idna==2.10
 ImageHash==4.2.0
 imageio==2.9.0
 imagesize==1.2.0
+immutables==0.14
 importlib-metadata==2.0.0
 incremental==17.5.0
 iniconfig==1.1.1
@@ -132,7 +140,9 @@ keras-tuner==1.0.1
 kiwisolver==1.3.1
 korean-lunar-calendar==0.2.1
 lazy-object-proxy==1.5.1
+liac-arff==2.5.0
 libarchive-c==2.9
+lightgbm==3.1.1
 llvmlite==0.34.0
 locket==0.2.0
 LunarCalendar==0.0.9
@@ -172,6 +182,7 @@ numpy==1.19.4
 numpydoc==1.1.0
 oauthlib==3.1.0
 opencv-python==4.4.0.46
+openml==0.11.0
 openpyxl==3.0.5
 opt-einsum==3.3.0
 packaging==20.4
@@ -180,6 +191,7 @@ pandas==1.1.4
 pandas-profiling==2.9.0
 pandoc==1.0.2
 pandocfilters==1.4.3
+paramiko==2.7.2
 parsel==1.6.0
 parso==0.8.0
 partd==1.1.0
@@ -188,12 +200,13 @@ patsy==0.5.1
 pexpect==4.8.0
 phik==0.10.0
 pickleshare==0.7.5
-Pillow==8.0.1
+Pillow==6.2.1
 plac==1.2.0
 plotly==4.12.0
 pluggy==0.13.1
 plumbum==1.6.9
 ply==3.11
+portalocker==2.0.0
 preshed==3.0.4
 prettytable==2.0.0
 prometheus-client==0.9.0
@@ -201,12 +214,13 @@ prompt-toolkit==3.0.8
 Protego==0.1.16
 protobuf==3.14.0
 protobuf3-to-dict==0.1.5
-psutil==5.7.3
+psutil==5.7.0
 psycopg2-binary==2.8.6
 ptyprocess==0.6.0
 py==1.9.0
 py4j==0.10.7
-pyarrow==2.0.0
+pyaml==20.4.0
+pyarrow==1.0.0
 pyasn1==0.4.8
 pyasn1-modules==0.2.8
 pyception==0.1.1
@@ -223,6 +237,7 @@ pylint==2.6.0
 pymc3==3.9.3
 PyMeeus==0.3.7
 PyMySQL==0.10.1
+PyNaCl==1.4.0
 PyOpenGL==3.1.5
 pyOpenSSL==19.1.0
 pyparsing==2.4.7
@@ -261,11 +276,13 @@ rsa==4.6
 ruamel.yaml==0.16.12
 ruamel.yaml.clib==0.2.2
 s3transfer==0.3.3
+sacrebleu==1.4.14
 sacremoses==0.0.43
 sagemaker==2.16.3.post0
 sagemaker-pyspark==1.4.1
 scikit-image==0.17.2
 scikit-learn==0.23.2
+scikit-optimize==0.8.1
 scipy==1.5.4
 Scrapy==2.4.1
 seaborn==0.11.0
@@ -311,7 +328,7 @@ threadpoolctl==2.1.0
 thrift==0.13.0
 tifffile==2020.11.18
 tinycss2==1.1.0
-tokenizers==0.9.4
+tokenizers==0.8.1
 toml==0.10.2
 toolz==0.11.1
 tornado==6.1
@@ -320,6 +337,7 @@ traitlets==5.0.5
 transformers==3.5.1
 Twisted==20.3.0
 typed-ast==1.4.1
+typing==3.7.4.3
 typing-extensions==3.7.4.3
 ujson==4.0.1
 urllib3==1.26.2
@@ -336,6 +354,8 @@ wrapt==1.12.1
 xarray==0.16.1
 xlrd==1.2.0
 XlsxWriter==1.3.7
+xmltodict==0.12.0
+yacs==0.1.8
 zict==2.0.0
 zipp==3.4.0
 zope.interface==5.2.0
